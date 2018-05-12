@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  First name:<br>
+  <input type="text" name="first_name" required>
+  <br>
+  Last name:<br>
+  <input type="text" name="last_name" required>
+  <br>
+  email:<br>
+  <input type="email" name="email" required>
+  <br>
+  password:<br>
+  <input type="text" name='password' required>
+  <br><br>
+  <input type="submit" value="Submit" required>
+  <br><br>
+</form>
+<div>
+
+{{ email }}
+
+</div>
+</body>
+</html>
