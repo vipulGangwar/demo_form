@@ -21,7 +21,7 @@ def test_form_collection(request):
         print (email)
         password = request.POST.get('password','')
         print (password)
-        auth_url  = 'http://127.0.0.1:8000/test_form/'
+        auth_url  = 'https://secninjaz.herokuapp.com/test_form/'
         payload = {'first_name': first_name, 'last_name': last_name, 'email': email, 'password':password }
         headers = {'content-type':'application/json'}
         r = requests.post(auth_url, headers=headers, data= dumps(payload))
@@ -36,7 +36,7 @@ def test_user(request):
     elif request.method == 'POST':
         email= request.POST.get('email', '')
         password = request.POST.get('password','')
-        auth_url  = 'http://127.0.0.1:8000/get_details/'
+        auth_url  = 'https://secninjaz.herokuapp.com/get_details/'
         payload = {'email': email, 'password':password }
         headers = {'content-type':'application/json'}
         r = requests.post(auth_url, headers=headers, data= dumps(payload))
