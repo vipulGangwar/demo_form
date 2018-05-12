@@ -27,7 +27,7 @@ def test_form_collection(request):
         r = requests.post(auth_url, headers=headers, data= dumps(payload))
         #return HttpResponseRedirect('http://127.0.0.1:8000/test_form/')
         #return render(request,'login.html')
-        return HttpResponseRedirect('http://127.0.0.1:5000/login')
+        return HttpResponseRedirect('http://127.0.0.1:8000/login')
 
 def test_user(request):
     if request.method == 'GET':
